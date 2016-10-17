@@ -3,21 +3,21 @@
 // if adding two bytes yields a value that is too high
 public class DebugTwelve2
 {
-   public static void main(String[] args)
+   public static void main(String[] args) throws ArithmeticException
    {
       byte num1 = 120, num2 = 120, result;
       final byte HIGHBYTE = 127;
       try
       {
-         allowed = (byte)(HIGHBYTE - num1);
+         byte allowed = (byte)(HIGHBYTE - num1);
          if(num2 > allowed)
-            throw(new Arithmeticexception());
+            throw(new ArithmeticException());
          result = (byte)(num1 + num2);
          System.out.println("Result is " + result);
       }
-      catch(ArithmeticException error)
+      catch(Exception ArithmeticException)
       {
-         System.out.println("Byte can't hold value higher than " + HIGHBYT);
+         System.out.println("Byte can't hold value higher than " + HIGHBYTE);
       }
    }
 }
